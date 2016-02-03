@@ -13,8 +13,8 @@
 		84A862901C621AB70011962C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A8628E1C621AB70011962C /* Main.storyboard */; };
 		84A862921C621AB70011962C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84A862911C621AB70011962C /* Assets.xcassets */; };
 		84A862951C621AB70011962C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A862931C621AB70011962C /* LaunchScreen.storyboard */; };
-		84A862CC1C62209E0011962C /* ZKLuanchImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A862CB1C62209E0011962C /* ZKLuanchImageManager.m */; };
-		84A862CF1C6225260011962C /* ZKNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A862CE1C6225260011962C /* ZKNetworkManager.m */; };
+		B6A7425E1C6245F800A897EC /* ZKLuanchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A7425D1C6245F800A897EC /* ZKLuanchViewController.m */; };
+		B6A742611C62472600A897EC /* ZKHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B6A742601C62472600A897EC /* ZKHttpTools.m */; };
 		B71A568DF6555094B6828A3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CBD2BD1575A2BF969AB78C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +31,12 @@
 		84A862911C621AB70011962C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84A862941C621AB70011962C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84A862961C621AB70011962C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84A862CA1C62209E0011962C /* ZKLuanchImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKLuanchImageManager.h; sourceTree = "<group>"; };
-		84A862CB1C62209E0011962C /* ZKLuanchImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKLuanchImageManager.m; sourceTree = "<group>"; };
-		84A862CD1C6225260011962C /* ZKNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKNetworkManager.h; sourceTree = "<group>"; };
-		84A862CE1C6225260011962C /* ZKNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKNetworkManager.m; sourceTree = "<group>"; };
 		B4928372583663F22EEC00AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B6A7425C1C6245F800A897EC /* ZKLuanchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZKLuanchViewController.h; path = ZKNews/Classes/Welcome/ZKLuanchViewController.h; sourceTree = SOURCE_ROOT; };
+		B6A7425D1C6245F800A897EC /* ZKLuanchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZKLuanchViewController.m; path = ZKNews/Classes/Welcome/ZKLuanchViewController.m; sourceTree = SOURCE_ROOT; };
+		B6A7425F1C62472600A897EC /* ZKHttpTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKHttpTools.h; sourceTree = "<group>"; };
+		B6A742601C62472600A897EC /* ZKHttpTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKHttpTools.m; sourceTree = "<group>"; };
+		B6A742621C624A2700A897EC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 				84A862931C621AB70011962C /* LaunchScreen.storyboard */,
 				84A862961C621AB70011962C /* Info.plist */,
 				84A862861C621AB70011962C /* main.m */,
+				B6A742621C624A2700A897EC /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -450,10 +452,8 @@
 		84A862C71C621D690011962C /* Tools(工具类) */ = {
 			isa = PBXGroup;
 			children = (
-				84A862CA1C62209E0011962C /* ZKLuanchImageManager.h */,
-				84A862CB1C62209E0011962C /* ZKLuanchImageManager.m */,
-				84A862CD1C6225260011962C /* ZKNetworkManager.h */,
-				84A862CE1C6225260011962C /* ZKNetworkManager.m */,
+				B6A7425F1C62472600A897EC /* ZKHttpTools.h */,
+				B6A742601C62472600A897EC /* ZKHttpTools.m */,
 			);
 			path = "Tools(工具类)";
 			sourceTree = "<group>";
@@ -468,8 +468,11 @@
 		84A862C91C621D690011962C /* Welcome(欢迎) */ = {
 			isa = PBXGroup;
 			children = (
+				B6A7425C1C6245F800A897EC /* ZKLuanchViewController.h */,
+				B6A7425D1C6245F800A897EC /* ZKLuanchViewController.m */,
 			);
-			path = "Welcome(欢迎)";
+			name = "Welcome(欢迎)";
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		C25C9323C443DF970BD70FC7 /* Pods */ = {
@@ -602,11 +605,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A862CF1C6225260011962C /* ZKNetworkManager.m in Sources */,
+				B6A7425E1C6245F800A897EC /* ZKLuanchViewController.m in Sources */,
+				B6A742611C62472600A897EC /* ZKHttpTools.m in Sources */,
 				84A8628D1C621AB70011962C /* ViewController.m in Sources */,
 				84A8628A1C621AB70011962C /* AppDelegate.m in Sources */,
 				84A862871C621AB70011962C /* main.m in Sources */,
-				84A862CC1C62209E0011962C /* ZKLuanchImageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -720,6 +723,8 @@
 			baseConfigurationReference = 13897B4EC994C34A5F877361 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZKNews/PrefixHeader.pch";
 				INFOPLIST_FILE = ZKNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tarena.ZKNews;
@@ -732,6 +737,8 @@
 			baseConfigurationReference = B4928372583663F22EEC00AD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZKNews/PrefixHeader.pch";
 				INFOPLIST_FILE = ZKNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tarena.ZKNews;
